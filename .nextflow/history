@@ -1,0 +1,4 @@
+2022-10-28 11:58:55	-	agitated_watson	-	8cb75b4928c3482120ce0f03a54c88f0	c3c5f82a-b593-4bc6-ac41-4b63cddc9f61	nextflow run main.nf --input assets/test.samplesheet.tsv
+2022-10-28 11:59:40	-	stupefied_hypatia	-	8cb75b4928c3482120ce0f03a54c88f0	66cb6a47-35d4-42c7-8331-6b4fc4c0ebf2	nextflow run main.nf --input assets/test.samplesheet.tsv --outdir . -dump-channels
+2022-10-28 12:00:45	-	backstabbing_varahamihira	-	8cb75b4928c3482120ce0f03a54c88f0	aaf18a09-d8db-4f4a-898f-c5555395debf	nextflow run main.nf --input assets/test.samplesheet.tsv --outdir . -dump-channels
+2022-10-28 12:02:08	-	tiny_dijkstra	-	8cb75b4928c3482120ce0f03a54c88f0	2b79928c-be71-4071-aa9e-bfd5ae75ecdd	nextflow run main.nf --input assets/test.samplesheet.tsv --outdir . -dump-channels

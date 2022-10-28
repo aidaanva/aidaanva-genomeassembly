@@ -1,0 +1,41 @@
+Oct-28 11:59:38.093 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input assets/test.samplesheet.tsv --outdir . -dump-channels
+Oct-28 11:59:38.182 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.0
+Oct-28 11:59:38.205 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/andrades/.nextflow/plugins; core-plugins: nf-amazon@1.11.0,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.4,nf-tower@1.5.5,nf-wave@0.5.2
+Oct-28 11:59:38.216 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-28 11:59:38.217 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-28 11:59:38.221 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Oct-28 11:59:38.241 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-28 11:59:38.268 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config
+Oct-28 11:59:38.269 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config
+Oct-28 11:59:38.306 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-28 11:59:40.181 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Oct-28 11:59:40.203 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [stupefied_hypatia] DSL2 - revision: 8cb75b4928
+Oct-28 11:59:40.204 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-28 11:59:40.204 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-28 11:59:40.214 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /Users/andrades/.nextflow/secrets/store.json
+Oct-28 11:59:40.217 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@3df1a1ac] - activable => nextflow.secret.LocalSecretsProvider@3df1a1ac
+Oct-28 11:59:40.312 [main] DEBUG nextflow.Session - Session UUID: 66cb6a47-35d4-42c7-8331-6b4fc4c0ebf2
+Oct-28 11:59:40.312 [main] DEBUG nextflow.Session - Run name: stupefied_hypatia
+Oct-28 11:59:40.312 [main] DEBUG nextflow.Session - Executor pool size: 8
+Oct-28 11:59:40.327 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-28 11:59:40.359 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.0 build 5826
+  Created: 13-10-2022 05:44 UTC (07:44 CEST)
+  System: Mac OS X 12.5.1
+  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 17.0.3+7-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 22155@damp133427.local [172.16.9.126]
+  CPUs: 8 - Mem: 16 GB (201.4 MB) - Swap: 7 GB (571.8 MB)
+Oct-28 11:59:40.383 [main] DEBUG nextflow.Session - Work-dir: /Users/andrades/Documents/git/aidaanva-genomeassembly/work [Mac OS X]
+Oct-28 11:59:40.410 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-28 11:59:40.423 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-28 11:59:40.509 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-28 11:59:40.522 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Oct-28 11:59:40.600 [main] DEBUG nextflow.Session - Session start
+Oct-28 11:59:40.605 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/andrades/Documents/git/aidaanva-genomeassembly/pipeline_info/execution_trace_2022-10-28_11-59-40.txt
+Oct-28 11:59:40.616 [main] DEBUG nextflow.Session - Using default localLib path: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib
+Oct-28 11:59:40.620 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib
+Oct-28 11:59:40.621 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib/nfcore_external_java_deps.jar
+Oct-28 11:59:41.748 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-28 11:59:41.948 [main] ERROR nextflow.Nextflow - ERROR: Validation of pipeline parameters failed!
+Oct-28 11:59:41.961 [main] ERROR nextflow.Nextflow - * --input: string [assets/test.samplesheet.tsv] does not match pattern ^\S+\.csv$ (assets/test.samplesheet.tsv)

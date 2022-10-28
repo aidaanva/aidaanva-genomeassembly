@@ -1,0 +1,77 @@
+Oct-28 12:00:43.303 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input assets/test.samplesheet.tsv --outdir . -dump-channels
+Oct-28 12:00:43.393 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.0
+Oct-28 12:00:43.419 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/andrades/.nextflow/plugins; core-plugins: nf-amazon@1.11.0,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.4,nf-tower@1.5.5,nf-wave@0.5.2
+Oct-28 12:00:43.433 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Oct-28 12:00:43.434 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Oct-28 12:00:43.439 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Oct-28 12:00:43.451 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Oct-28 12:00:43.477 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config
+Oct-28 12:00:43.478 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config
+Oct-28 12:00:43.513 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Oct-28 12:00:45.136 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
+Oct-28 12:00:45.161 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [backstabbing_varahamihira] DSL2 - revision: 8cb75b4928
+Oct-28 12:00:45.162 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Oct-28 12:00:45.162 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
+Oct-28 12:00:45.173 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /Users/andrades/.nextflow/secrets/store.json
+Oct-28 12:00:45.177 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4baed682] - activable => nextflow.secret.LocalSecretsProvider@4baed682
+Oct-28 12:00:45.265 [main] DEBUG nextflow.Session - Session UUID: aaf18a09-d8db-4f4a-898f-c5555395debf
+Oct-28 12:00:45.265 [main] DEBUG nextflow.Session - Run name: backstabbing_varahamihira
+Oct-28 12:00:45.265 [main] DEBUG nextflow.Session - Executor pool size: 8
+Oct-28 12:00:45.280 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Oct-28 12:00:45.311 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.10.0 build 5826
+  Created: 13-10-2022 05:44 UTC (07:44 CEST)
+  System: Mac OS X 12.5.1
+  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 17.0.3+7-LTS
+  Encoding: UTF-8 (UTF-8)
+  Process: 22205@damp133427.local [172.16.9.126]
+  CPUs: 8 - Mem: 16 GB (135.3 MB) - Swap: 7 GB (573.2 MB)
+Oct-28 12:00:45.326 [main] DEBUG nextflow.Session - Work-dir: /Users/andrades/Documents/git/aidaanva-genomeassembly/work [Mac OS X]
+Oct-28 12:00:45.352 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Oct-28 12:00:45.365 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Oct-28 12:00:45.435 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Oct-28 12:00:45.449 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Oct-28 12:00:45.534 [main] DEBUG nextflow.Session - Session start
+Oct-28 12:00:45.538 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/andrades/Documents/git/aidaanva-genomeassembly/pipeline_info/execution_trace_2022-10-28_12-00-45.txt
+Oct-28 12:00:45.550 [main] DEBUG nextflow.Session - Using default localLib path: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib
+Oct-28 12:00:45.553 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib
+Oct-28 12:00:45.554 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib/nfcore_external_java_deps.jar
+Oct-28 12:00:46.650 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Oct-28 12:00:46.817 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+[0;35m  aidaanva/genomeassembly v1.0dev[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName    : [0;32mbackstabbing_varahamihira[0m
+  [0;34mlaunchDir  : [0;32m/Users/andrades/Documents/git/aidaanva-genomeassembly[0m
+  [0;34mworkDir    : [0;32m/Users/andrades/Documents/git/aidaanva-genomeassembly/work[0m
+  [0;34mprojectDir : [0;32m/Users/andrades/Documents/git/aidaanva-genomeassembly[0m
+  [0;34muserName   : [0;32mandrades[0m
+  [0;34mprofile    : [0;32mstandard[0m
+  [0;34mconfigFiles: [0;32m/Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34minput      : [0;32massets/test.samplesheet.tsv[0m
+  [0;34moutdir     : [0;32m.[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use aidaanva/genomeassembly for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/aidaanva/genomeassembly/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+Oct-28 12:00:46.819 [main] WARN  nextflow.Nextflow - [aidaanva/genomeassembly] You are attempting to run the pipeline without any custom configuration!
+
+This will be dependent on your local compute environment but can be achieved via one or more of the following:
+   (1) Using an existing pipeline profile e.g. `-profile docker` or `-profile singularity`
+   (2) Using an existing nf-core/configs for your Institution e.g. `-profile crick` or `-profile uppmax`
+   (3) Using your own local custom config e.g. `-c /path/to/your/custom.config`
+
+Please refer to the quick start section and usage docs for the pipeline.
+ 
+Oct-28 12:00:47.002 [main] ERROR nextflow.Nextflow - Genome fasta file not specified with e.g. '--fasta genome.fa' or via a detectable config file.

@@ -1,0 +1,3 @@
+sample_id	library_id	pairment	damage_treatment	r1	r2
+ABC001	ABC001.A0101	single	none	/path/to/file.fq.gz	NA
+ABC002	ABC002.A0101	paired	none	/path/to/file1.fq.gz	/path/to/file2.fq.gz
