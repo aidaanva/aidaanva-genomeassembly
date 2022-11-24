@@ -79,7 +79,23 @@ workflow GENOMEASSEMBLY {
     )
     ch_versions = ch_versions.mix(ADAPTERREMOVAL.out.versions)
 
-    ADAPTERREMOVAL.out.paired_truncated.dump()
+//    ADAPTERREMOVAL.out.paired_truncated.dump()
+//    ADAPTERREMOVAL.out.singles_truncated.dump()
+
+//Test with real test data: singletons --> check that they are in the right order
+    ch_input_for_yml_creation = ADAPTERREMOVAL.out.paired_truncated.mix(
+        ADAPTERREMOVAL.out.singles_truncated
+    ).groupTuple()
+    .map{
+        meta, reads ->
+            def new_meta = meta.clone()
+                new_meta["lib_id"] = null
+            def pairs = reads[0]
+            def singletons = reads[1] ? reads[1] : []
+        [ new_meta, pairs, singletons ]
+    }
+    .groupTuple( by : 0 )
+    .dump()
 
 
 }

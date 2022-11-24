@@ -25,6 +25,7 @@ def create_fastq_channel(LinkedHashMap row) {
     // create meta map
     def meta = [:]
     meta.id         = row.sample_id
+    meta.lib_id     = row.library_id
     meta.single_end = row.pairment == "paired" ? false : true
     meta.treatment = row.damage_treatment
 
