@@ -1,3 +1,0 @@
-sample_id	library_id	pairment	damage_treatment	r1	r2
-test_minigut	test_minigut	paired	none	https://github.com/nf-core/test-datasets/raw/mag/test_data/test_minigut_R1.fastq.gz	https://github.com/nf-core/test-datasets/raw/mag/test_data/test_minigut_R2.fastq.gz
-test_minigut2	test_minigut2	paired	none	https://github.com/nf-core/test-datasets/raw/mag/test_data/test_minigut_sample2_R1.fastq.gz	https://github.com/nf-core/test-datasets/raw/mag/test_data/test_minigut_sample2_R2.fastq.gz
