@@ -1,8 +1,0 @@
-[{
-	orientation: "fr",
-	type: "paired-end",
-	right reads: ["test_minigut2_Lib2.pair1.truncated.fastq.gz", "test_minigut_Lib1.pair1.truncated.fastq.gz"],
-	left reads: ["test_minigut2_Lib2.pair2.truncated.fastq.gz", "test_minigut_Lib1.pair2.truncated.fastq.gz"],
-	single reads: []
-	}
-]
