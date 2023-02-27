@@ -38,6 +38,7 @@ ch_multiqc_custom_methods_description = params.multiqc_methods_description ? fil
 // SUBWORKFLOW: Consisting of a mix of local and nf-core/modules
 //
 include { INPUT_CHECK } from '../subworkflows/local/input_check'
+include { YML_CREATION_SPADES } from '../modules/local/yml_creation'
 
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
@@ -95,8 +96,15 @@ workflow GENOMEASSEMBLY {
         [ new_meta, pairs, singletons ]
     }
     .groupTuple( by : 0 )
+    .map{
+        meta, pairs, singletons ->
+            def pairs2 = pairs.flatten()
+            def singletons2 = singletons.flatten()
+        [ meta, pairs2, singletons2]
+    }
     .dump()
 
+    YML_CREATION_SPADES(ch_input_for_yml_creation)
 
 }
 /*
