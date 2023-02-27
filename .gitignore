@@ -1,0 +1,5 @@
+Testing/
+work/
+.nextflow.log*
+.nextflow/
+pipeline_info/

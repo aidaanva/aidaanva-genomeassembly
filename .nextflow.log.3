@@ -1,42 +1,409 @@
-Oct-28 11:58:53.729 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input assets/test.samplesheet.tsv
-Oct-28 11:58:53.799 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.10.0
-Oct-28 11:58:53.831 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; embedded=false; plugins-dir=/Users/andrades/.nextflow/plugins; core-plugins: nf-amazon@1.11.0,nf-azure@0.14.2,nf-codecommit@0.1.2,nf-console@1.0.4,nf-ga4gh@1.0.4,nf-google@1.4.4,nf-tower@1.5.5,nf-wave@0.5.2
-Oct-28 11:58:53.856 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
-Oct-28 11:58:53.857 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
-Oct-28 11:58:53.860 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
-Oct-28 11:58:53.872 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
-Oct-28 11:58:53.920 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config
-Oct-28 11:58:53.922 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config
-Oct-28 11:58:53.958 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
-Oct-28 11:58:55.659 [main] DEBUG nextflow.cli.CmdRun - Applied DSL=2 from script declararion
-Oct-28 11:58:55.693 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [agitated_watson] DSL2 - revision: 8cb75b4928
-Oct-28 11:58:55.694 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
-Oct-28 11:58:55.694 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins resolved requirement=[]
-Oct-28 11:58:55.710 [main] DEBUG nextflow.secret.LocalSecretsProvider - Secrets store: /Users/andrades/.nextflow/secrets/store.json
-Oct-28 11:58:55.714 [main] DEBUG nextflow.secret.SecretsLoader - Discovered secrets providers: [nextflow.secret.LocalSecretsProvider@4fc5563d] - activable => nextflow.secret.LocalSecretsProvider@4fc5563d
-Oct-28 11:58:55.852 [main] DEBUG nextflow.Session - Session UUID: c3c5f82a-b593-4bc6-ac41-4b63cddc9f61
-Oct-28 11:58:55.853 [main] DEBUG nextflow.Session - Run name: agitated_watson
-Oct-28 11:58:55.853 [main] DEBUG nextflow.Session - Executor pool size: 8
-Oct-28 11:58:55.872 [main] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=10; maxSize=24; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
-Oct-28 11:58:55.907 [main] DEBUG nextflow.cli.CmdRun - 
-  Version: 22.10.0 build 5826
-  Created: 13-10-2022 05:44 UTC (07:44 CEST)
-  System: Mac OS X 12.5.1
-  Runtime: Groovy 3.0.13 on OpenJDK 64-Bit Server VM 17.0.3+7-LTS
+Feb-27 10:55:34.316 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf --input test.tsv --outdir Testing -profile test,docker -dump-channels -resume
+Feb-27 10:55:34.435 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 22.04.0
+Feb-27 10:55:34.482 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config
+Feb-27 10:55:34.483 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config
+Feb-27 10:55:34.513 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `test,docker`
+Feb-27 10:55:36.433 [main] DEBUG nextflow.config.ConfigBuilder - Available config profiles: [gitpod, debug, shifter, test, mamba, charliecloud, conda, singularity, test_full, docker, podman]
+Feb-27 10:55:36.528 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [serene_tesla] DSL2 - revision: 8cb75b4928
+Feb-27 10:55:36.550 [main] DEBUG nextflow.plugin.PluginsFacade - Setting up plugin manager > mode=prod; plugins-dir=/Users/andrades/.nextflow/plugins; core-plugins: nf-amazon@1.7.1,nf-azure@0.13.1,nf-console@1.0.3,nf-ga4gh@1.0.3,nf-google@1.1.4,nf-sqldb@0.4.0,nf-tower@1.4.0
+Feb-27 10:55:36.551 [main] DEBUG nextflow.plugin.PluginsFacade - Plugins default=[]
+Feb-27 10:55:36.565 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Enabled plugins: []
+Feb-27 10:55:36.567 [main] INFO  org.pf4j.DefaultPluginStatusProvider - Disabled plugins: []
+Feb-27 10:55:36.572 [main] INFO  org.pf4j.DefaultPluginManager - PF4J version 3.4.1 in 'deployment' mode
+Feb-27 10:55:36.586 [main] INFO  org.pf4j.AbstractPluginManager - No plugins
+Feb-27 10:55:36.673 [main] DEBUG nextflow.Session - Session uuid: 96a568ef-c562-4232-92f3-e7a1c558de1a
+Feb-27 10:55:36.673 [main] DEBUG nextflow.Session - Run name: serene_tesla
+Feb-27 10:55:36.674 [main] DEBUG nextflow.Session - Executor pool size: 8
+Feb-27 10:55:36.712 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 22.04.0 build 5697
+  Created: 23-04-2022 18:00 UTC (20:00 CEST)
+  System: Mac OS X 10.16
+  Runtime: Groovy 3.0.10 on OpenJDK 64-Bit Server VM 11.0.8+10-LTS
   Encoding: UTF-8 (UTF-8)
-  Process: 22121@damp133427.local [172.16.9.126]
-  CPUs: 8 - Mem: 16 GB (127.4 MB) - Swap: 7 GB (678.2 MB)
-Oct-28 11:58:55.928 [main] DEBUG nextflow.Session - Work-dir: /Users/andrades/Documents/git/aidaanva-genomeassembly/work [Mac OS X]
-Oct-28 11:58:55.956 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
-Oct-28 11:58:55.969 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
-Oct-28 11:58:56.037 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
-Oct-28 11:58:56.057 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
-Oct-28 11:58:56.158 [main] DEBUG nextflow.Session - Session start
-Oct-28 11:58:56.164 [main] DEBUG nextflow.trace.TraceFileObserver - Workflow started -- trace file: /Users/andrades/Documents/git/aidaanva-genomeassembly/null/pipeline_info/execution_trace_2022-10-28_11-58-55.txt
-Oct-28 11:58:56.461 [main] DEBUG nextflow.Session - Using default localLib path: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib
-Oct-28 11:58:56.464 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib
-Oct-28 11:58:56.464 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib/nfcore_external_java_deps.jar
-Oct-28 11:58:57.549 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
-Oct-28 11:58:57.718 [main] ERROR nextflow.Nextflow - ERROR: Validation of pipeline parameters failed!
-Oct-28 11:58:57.730 [main] ERROR nextflow.Nextflow - * Missing required parameter: --outdir
-Oct-28 11:58:57.731 [main] ERROR nextflow.Nextflow - * --input: string [assets/test.samplesheet.tsv] does not match pattern ^\S+\.csv$ (assets/test.samplesheet.tsv)
+  Process: 4564@damp133427.local [127.0.0.1]
+  CPUs: 8 - Mem: 16 GB (467.3 MB) - Swap: 2 GB (511.8 MB)
+Feb-27 10:55:36.754 [main] DEBUG nextflow.Session - Work-dir: /Users/andrades/Documents/git/aidaanva-genomeassembly/work [Mac OS X]
+Feb-27 10:55:36.776 [main] DEBUG nextflow.executor.ExecutorFactory - Extension executors providers=[]
+Feb-27 10:55:36.818 [main] DEBUG nextflow.Session - Observer factory: DefaultObserverFactory
+Feb-27 10:55:36.915 [main] DEBUG nextflow.cache.CacheFactory - Using Nextflow cache factory: nextflow.cache.DefaultCacheFactory
+Feb-27 10:55:36.932 [main] DEBUG nextflow.util.CustomThreadPool - Creating default thread pool > poolSize: 9; maxThreads: 1000
+Feb-27 10:55:37.098 [main] DEBUG nextflow.Session - Session start invoked
+Feb-27 10:55:37.102 [main] DEBUG nextflow.trace.TraceFileObserver - Flow starting -- trace file: /Users/andrades/Documents/git/aidaanva-genomeassembly/Testing/pipeline_info/execution_trace_2023-02-27_10-55-36.txt
+Feb-27 10:55:37.113 [main] DEBUG nextflow.Session - Using default localLib path: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib
+Feb-27 10:55:37.117 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib
+Feb-27 10:55:37.117 [main] DEBUG nextflow.Session - Adding to the classpath library: /Users/andrades/Documents/git/aidaanva-genomeassembly/lib/nfcore_external_java_deps.jar
+Feb-27 10:55:38.493 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Feb-27 10:55:38.742 [main] WARN  nextflow.Nextflow - Found unexpected parameters:
+* --config_profile_description: Minimal test dataset to check pipeline function
+* --config_profile_name: Test profile
+Feb-27 10:55:38.743 [main] INFO  nextflow.Nextflow - - [2mIgnore this warning: params.schema_ignore_params = "config_profile_description,config_profile_name" [0m
+Feb-27 10:55:38.763 [main] INFO  nextflow.Nextflow - 
+
+-[2m----------------------------------------------------[0m-
+[0;35m  aidaanva/genomeassembly v1.0dev[0m
+-[2m----------------------------------------------------[0m-
+[1mCore Nextflow options[0m
+  [0;34mrunName        : [0;32mserene_tesla[0m
+  [0;34mcontainerEngine: [0;32mdocker[0m
+  [0;34mlaunchDir      : [0;32m/Users/andrades/Documents/git/aidaanva-genomeassembly[0m
+  [0;34mworkDir        : [0;32m/Users/andrades/Documents/git/aidaanva-genomeassembly/work[0m
+  [0;34mprojectDir     : [0;32m/Users/andrades/Documents/git/aidaanva-genomeassembly[0m
+  [0;34muserName       : [0;32mandrades[0m
+  [0;34mprofile        : [0;32mtest,docker[0m
+  [0;34mconfigFiles    : [0;32m/Users/andrades/Documents/git/aidaanva-genomeassembly/nextflow.config[0m
+
+[1mInput/output options[0m
+  [0;34minput          : [0;32mtest.tsv[0m
+  [0;34moutdir         : [0;32mTesting[0m
+
+[1mReference genome options[0m
+  [0;34mgenome         : [0;32mR64-1-1[0m
+  [0;34mfasta          : [0;32ms3://ngi-igenomes/igenomes/Saccharomyces_cerevisiae/Ensembl/R64-1-1/Sequence/WholeGenomeFasta/genome.fa[0m
+
+[1mMax job request options[0m
+  [0;34mmax_cpus       : [0;32m2[0m
+  [0;34mmax_memory     : [0;32m6.GB[0m
+  [0;34mmax_time       : [0;32m6.h[0m
+
+!! Only displaying parameters that differ from the pipeline defaults !!
+-[2m----------------------------------------------------[0m-
+If you use aidaanva/genomeassembly for your analysis please cite:
+
+* The nf-core framework
+  https://doi.org/10.1038/s41587-020-0439-x
+
+* Software dependencies
+  https://github.com/aidaanva/genomeassembly/blob/master/CITATIONS.md
+-[2m----------------------------------------------------[0m-
+Feb-27 10:55:39.123 [main] DEBUG nextflow.plugin.PluginUpdater - Installing plugin nf-amazon version: 1.7.1
+Feb-27 10:55:39.130 [main] INFO  org.pf4j.AbstractPluginManager - Plugin 'nf-amazon@1.7.1' resolved
+Feb-27 10:55:39.131 [main] INFO  org.pf4j.AbstractPluginManager - Start plugin 'nf-amazon@1.7.1'
+Feb-27 10:55:39.160 [main] DEBUG nextflow.plugin.BasePlugin - Plugin started nf-amazon@1.7.1
+Feb-27 10:55:39.183 [main] DEBUG nextflow.file.FileHelper - > Added 'S3FileSystemProvider' to list of installed providers [s3]
+Feb-27 10:55:39.184 [main] DEBUG nextflow.file.FileHelper - Started plugin 'nf-amazon' required to handle file: s3://ngi-igenomes/igenomes/Saccharomyces_cerevisiae/Ensembl/R64-1-1/Sequence/WholeGenomeFasta/genome.fa
+Feb-27 10:55:39.194 [main] DEBUG nextflow.file.FileHelper - Creating a file system instance for provider: S3FileSystemProvider
+Feb-27 10:55:39.203 [main] DEBUG nextflow.file.FileHelper - AWS S3 config details: {max_error_retry=5}
+Feb-27 10:55:39.824 [main] DEBUG c.u.s3fs.S3FileSystemProvider - Using S3 multi-part downloader
+Feb-27 10:55:39.826 [main] DEBUG c.u.s3fs.ng.S3ParallelDownload - Creating S3 download thread pool: workers=10; chunkSize=10 MB; queueSize=10000; max-mem=1 GB; maxAttempts=5; maxDelay=1m 30s; pool-capacity=103
+Feb-27 10:55:44.358 [main] WARN  c.a.i.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58)
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46)
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112)
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68)
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165)
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75)
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117)
+	at com.amazonaws.services.s3.S3CredentialsProviderChain.getCredentials(S3CredentialsProviderChain.java:36)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.getCredentialsFromContext(AmazonHttpClient.java:1266)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.runBeforeRequestHandlers(AmazonHttpClient.java:842)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:792)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:779)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:753)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:713)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:695)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:559)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:539)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5453)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5400)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5394)
+	at com.amazonaws.services.s3.AmazonS3Client.listObjects(AmazonS3Client.java:928)
+	at com.upplication.s3fs.AmazonS3Client.listObjects(AmazonS3Client.java:129)
+	at com.upplication.s3fs.util.S3ObjectSummaryLookup.lookup(S3ObjectSummaryLookup.java:113)
+	at com.upplication.s3fs.S3FileSystemProvider.checkAccess(S3FileSystemProvider.java:642)
+	at java.base/java.nio.file.Files.exists(Files.java:2439)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.invoke(StaticMetaMethodSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.call(StaticMetaMethodSite.java:89)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.call(StaticMetaMethodSite.java:94)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.extension.FilesEx.exists(FilesEx.groovy:454)
+	at nextflow.file.FileHelper.checkIfExists(FileHelper.groovy:1032)
+	at nextflow.file.FileHelper$checkIfExists$2.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at nextflow.file.FileHelper$checkIfExists$2.call(Unknown Source)
+	at nextflow.Nextflow.file(Nextflow.groovy:159)
+	at nextflow.Nextflow$file.callStatic(Unknown Source)
+	at Script_fe242b6d.runScript(Script_fe242b6d:15)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:170)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:203)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:220)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:206)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:200)
+	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModule0PathMapSession(IncludeDef.groovy:142)
+	at nextflow.script.IncludeDef.access$0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef$__clinit__closure1.doCall(IncludeDef.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
+	at nextflow.script.IncludeDef.loadModule0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:114)
+	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_f48d80a6.runScript(Script_f48d80a6:34)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:170)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:203)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:220)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:212)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:334)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)
+Caused by: java.net.ConnectException: No route to host (connect failed)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 83 common frames omitted
+Feb-27 10:55:44.360 [main] WARN  c.a.i.InstanceMetadataServiceResourceFetcher - Fail to retrieve token 
+com.amazonaws.SdkClientException: Failed to connect to service endpoint: 
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:100)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.getToken(InstanceMetadataServiceResourceFetcher.java:91)
+	at com.amazonaws.internal.InstanceMetadataServiceResourceFetcher.readResource(InstanceMetadataServiceResourceFetcher.java:69)
+	at com.amazonaws.internal.EC2ResourceFetcher.readResource(EC2ResourceFetcher.java:66)
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsEndpoint(InstanceMetadataServiceCredentialsFetcher.java:58)
+	at com.amazonaws.auth.InstanceMetadataServiceCredentialsFetcher.getCredentialsResponse(InstanceMetadataServiceCredentialsFetcher.java:46)
+	at com.amazonaws.auth.BaseCredentialsFetcher.fetchCredentials(BaseCredentialsFetcher.java:112)
+	at com.amazonaws.auth.BaseCredentialsFetcher.getCredentials(BaseCredentialsFetcher.java:68)
+	at com.amazonaws.auth.InstanceProfileCredentialsProvider.getCredentials(InstanceProfileCredentialsProvider.java:165)
+	at com.amazonaws.auth.EC2ContainerCredentialsProviderWrapper.getCredentials(EC2ContainerCredentialsProviderWrapper.java:75)
+	at com.amazonaws.auth.AWSCredentialsProviderChain.getCredentials(AWSCredentialsProviderChain.java:117)
+	at com.amazonaws.services.s3.S3CredentialsProviderChain.getCredentials(S3CredentialsProviderChain.java:36)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.getCredentialsFromContext(AmazonHttpClient.java:1266)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeOneRequest(AmazonHttpClient.java:1287)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeHelper(AmazonHttpClient.java:1154)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.doExecute(AmazonHttpClient.java:811)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.executeWithTimer(AmazonHttpClient.java:779)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.execute(AmazonHttpClient.java:753)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutor.access$500(AmazonHttpClient.java:713)
+	at com.amazonaws.http.AmazonHttpClient$RequestExecutionBuilderImpl.execute(AmazonHttpClient.java:695)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:559)
+	at com.amazonaws.http.AmazonHttpClient.execute(AmazonHttpClient.java:539)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5453)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5400)
+	at com.amazonaws.services.s3.AmazonS3Client.invoke(AmazonS3Client.java:5394)
+	at com.amazonaws.services.s3.AmazonS3Client.listObjects(AmazonS3Client.java:928)
+	at com.upplication.s3fs.AmazonS3Client.listObjects(AmazonS3Client.java:129)
+	at com.upplication.s3fs.util.S3ObjectSummaryLookup.lookup(S3ObjectSummaryLookup.java:113)
+	at com.upplication.s3fs.S3FileSystemProvider.checkAccess(S3FileSystemProvider.java:642)
+	at java.base/java.nio.file.Files.exists(Files.java:2439)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.invoke(StaticMetaMethodSite.java:44)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.call(StaticMetaMethodSite.java:89)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.StaticMetaMethodSite.call(StaticMetaMethodSite.java:94)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at nextflow.extension.FilesEx.exists(FilesEx.groovy:454)
+	at nextflow.file.FileHelper.checkIfExists(FileHelper.groovy:1032)
+	at nextflow.file.FileHelper$checkIfExists$2.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at nextflow.file.FileHelper$checkIfExists$2.call(Unknown Source)
+	at nextflow.Nextflow.file(Nextflow.groovy:159)
+	at nextflow.Nextflow$file.callStatic(Unknown Source)
+	at Script_fe242b6d.runScript(Script_fe242b6d:15)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:170)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:203)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:220)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:206)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:200)
+	at nextflow.script.IncludeDef.memoizedMethodPriv$loadModule0PathMapSession(IncludeDef.groovy:142)
+	at nextflow.script.IncludeDef.access$0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef$__clinit__closure1.doCall(IncludeDef.groovy)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.codehaus.groovy.reflection.CachedMethod.invoke(CachedMethod.java:107)
+	at groovy.lang.MetaMethod.doMethodInvoke(MetaMethod.java:323)
+	at org.codehaus.groovy.runtime.metaclass.ClosureMetaClass.invokeMethod(ClosureMetaClass.java:274)
+	at groovy.lang.MetaClassImpl.invokeMethod(MetaClassImpl.java:1035)
+	at groovy.lang.Closure.call(Closure.java:412)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.lambda$call$0(Memoize.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:137)
+	at org.codehaus.groovy.runtime.memoize.ConcurrentCommonCache.getAndPut(ConcurrentCommonCache.java:113)
+	at org.codehaus.groovy.runtime.memoize.Memoize$MemoizeFunction.call(Memoize.java:136)
+	at nextflow.script.IncludeDef.loadModule0(IncludeDef.groovy)
+	at nextflow.script.IncludeDef.load0(IncludeDef.groovy:114)
+	at nextflow.script.IncludeDef$load0$1.call(Unknown Source)
+	at org.codehaus.groovy.runtime.callsite.CallSiteArray.defaultCall(CallSiteArray.java:47)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:125)
+	at org.codehaus.groovy.runtime.callsite.AbstractCallSite.call(AbstractCallSite.java:139)
+	at Script_f48d80a6.runScript(Script_f48d80a6:34)
+	at nextflow.script.BaseScript.runDsl2(BaseScript.groovy:170)
+	at nextflow.script.BaseScript.run(BaseScript.groovy:203)
+	at nextflow.script.ScriptParser.runScript(ScriptParser.groovy:220)
+	at nextflow.script.ScriptRunner.run(ScriptRunner.groovy:212)
+	at nextflow.script.ScriptRunner.execute(ScriptRunner.groovy:120)
+	at nextflow.cli.CmdRun.run(CmdRun.groovy:334)
+	at nextflow.cli.Launcher.run(Launcher.groovy:480)
+	at nextflow.cli.Launcher.main(Launcher.groovy:639)
+Caused by: java.net.ConnectException: Host is down (connect failed)
+	at java.base/java.net.PlainSocketImpl.socketConnect(Native Method)
+	at java.base/java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:399)
+	at java.base/java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:242)
+	at java.base/java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:224)
+	at java.base/java.net.Socket.connect(Socket.java:609)
+	at java.base/sun.net.NetworkClient.doConnect(NetworkClient.java:177)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:474)
+	at java.base/sun.net.www.http.HttpClient.openServer(HttpClient.java:569)
+	at java.base/sun.net.www.http.HttpClient.<init>(HttpClient.java:242)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:341)
+	at java.base/sun.net.www.http.HttpClient.New(HttpClient.java:362)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.getNewHttpClient(HttpURLConnection.java:1253)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect0(HttpURLConnection.java:1232)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.plainConnect(HttpURLConnection.java:1081)
+	at java.base/sun.net.www.protocol.http.HttpURLConnection.connect(HttpURLConnection.java:1015)
+	at com.amazonaws.internal.ConnectionUtils.connectToEndpoint(ConnectionUtils.java:95)
+	at com.amazonaws.internal.EC2ResourceFetcher.doReadResource(EC2ResourceFetcher.java:80)
+	... 84 common frames omitted
+Feb-27 10:55:45.401 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:SAMPLESHEET_CHECK` matches process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK
+Feb-27 10:55:45.410 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-27 10:55:45.410 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-27 10:55:45.415 [main] DEBUG nextflow.executor.Executor - [warm up] executor > local
+Feb-27 10:55:45.419 [main] DEBUG n.processor.LocalPollingMonitor - Creating local task monitor for executor 'local' > cpus=8; memory=16 GB; capacity=8; pollInterval=100ms; dumpInterval=5m
+Feb-27 10:55:45.570 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withLabel:process_medium` matches labels `process_medium` for process with name AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL
+Feb-27 10:55:45.570 [main] DEBUG nextflow.script.ProcessConfig - Config settings `withName:ADAPTERREMOVAL` matches process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL
+Feb-27 10:55:45.573 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-27 10:55:45.573 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-27 10:55:45.600 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: null
+Feb-27 10:55:45.600 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'local'
+Feb-27 10:55:45.602 [main] DEBUG nextflow.Session - Workflow process names [dsl2]: FASTQC, SAMPLESHEET_CHECK, ADAPTERREMOVAL, AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES, MULTIQC, CUSTOM_DUMPSOFTWAREVERSIONS, YML_CREATION_SPADES, AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL, AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK
+Feb-27 10:55:45.605 [main] DEBUG nextflow.Session - Ignite dataflow network (7)
+Feb-27 10:55:45.613 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK
+Feb-27 10:55:45.613 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL
+Feb-27 10:55:45.613 [main] DEBUG nextflow.processor.TaskProcessor - Starting process > AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES
+Feb-27 10:55:45.614 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Feb-27 10:55:45.614 [main] DEBUG nextflow.Session - Session await
+Feb-27 10:55:45.823 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [7a/a8ad6a] Cached process > AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)
+Feb-27 10:55:45.858 [Actor Thread 6] DEBUG nextflow.util.ThreadPoolBuilder - Creating thread pool 'FileTransfer' minSize=4; maxSize=4; workQueue=LinkedBlockingQueue[10000]; allowCoreThreadTimeout=false
+Feb-27 10:55:47.178 [FileTransfer-2] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/mag/test_data/test_minigut_sample2_R1.fastq.gz at /Users/andrades/Documents/git/aidaanva-genomeassembly/work/stage/36/20f7799b1bffcd4cc233a984a1ae75/test_minigut_sample2_R1.fastq.gz
+Feb-27 10:55:47.654 [FileTransfer-3] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/mag/test_data/test_minigut_sample2_R2.fastq.gz at /Users/andrades/Documents/git/aidaanva-genomeassembly/work/stage/a1/3f0ae8d3474feef2e1e3baa7d65ce3/test_minigut_sample2_R2.fastq.gz
+Feb-27 10:55:47.668 [Actor Thread 6] DEBUG nextflow.processor.TaskProcessor - Process `AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)` is unable to find [UnixPath]: `/Users/andrades/Documents/git/aidaanva-genomeassembly/work/b3/a5e02b8534a8480f1f039b80612ade/test_minigut2_Lib2.truncated.fastq.gz` (pattern: `test_minigut2_Lib2.truncated.fastq.gz`)
+Feb-27 10:55:47.670 [Actor Thread 6] DEBUG nextflow.processor.TaskProcessor - Process `AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)` is unable to find [UnixPath]: `/Users/andrades/Documents/git/aidaanva-genomeassembly/work/b3/a5e02b8534a8480f1f039b80612ade/test_minigut2_Lib2.collapsed.fastq.gz` (pattern: `test_minigut2_Lib2.collapsed.fastq.gz`)
+Feb-27 10:55:47.670 [Actor Thread 6] DEBUG nextflow.processor.TaskProcessor - Process `AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)` is unable to find [UnixPath]: `/Users/andrades/Documents/git/aidaanva-genomeassembly/work/b3/a5e02b8534a8480f1f039b80612ade/test_minigut2_Lib2.collapsed.truncated.fastq.gz` (pattern: `test_minigut2_Lib2.collapsed.truncated.fastq.gz`)
+Feb-27 10:55:47.671 [Actor Thread 6] DEBUG nextflow.processor.TaskProcessor - Process `AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)` is unable to find [UnixPath]: `/Users/andrades/Documents/git/aidaanva-genomeassembly/work/b3/a5e02b8534a8480f1f039b80612ade/test_minigut2_Lib2.paired.fastq.gz` (pattern: `test_minigut2_Lib2.paired.fastq.gz`)
+Feb-27 10:55:47.672 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [b3/a5e02b] Cached process > AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)
+Feb-27 10:55:47.739 [Actor Thread 6] DEBUG nextflow.processor.TaskProcessor - Process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Feb-27 10:55:47.740 [Actor Thread 6] DEBUG nextflow.processor.TaskProcessor - Process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Feb-27 10:55:47.740 [Actor Thread 6] DEBUG nextflow.processor.TaskProcessor - Process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL > Skipping output binding because one or more optional files are missing: fileoutparam<4:1>
+Feb-27 10:55:47.740 [Actor Thread 6] DEBUG nextflow.processor.TaskProcessor - Process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Feb-27 10:55:48.647 [FileTransfer-1] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/mag/test_data/test_minigut_R1.fastq.gz at /Users/andrades/Documents/git/aidaanva-genomeassembly/work/stage/2c/d3ef000a5fbdd0d18d46cb561c9e6f/test_minigut_R1.fastq.gz
+Feb-27 10:55:48.799 [FileTransfer-4] DEBUG nextflow.file.FilePorter - Local cache found for foreign file https://github.com/nf-core/test-datasets/raw/mag/test_data/test_minigut_R2.fastq.gz at /Users/andrades/Documents/git/aidaanva-genomeassembly/work/stage/25/0663003624c03068aee363ea2f41ed/test_minigut_R2.fastq.gz
+Feb-27 10:55:48.805 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Process `AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)` is unable to find [UnixPath]: `/Users/andrades/Documents/git/aidaanva-genomeassembly/work/d7/0d1409e0e03e0b4d417d86f674225f/test_minigut_Lib1.truncated.fastq.gz` (pattern: `test_minigut_Lib1.truncated.fastq.gz`)
+Feb-27 10:55:48.807 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Process `AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)` is unable to find [UnixPath]: `/Users/andrades/Documents/git/aidaanva-genomeassembly/work/d7/0d1409e0e03e0b4d417d86f674225f/test_minigut_Lib1.collapsed.fastq.gz` (pattern: `test_minigut_Lib1.collapsed.fastq.gz`)
+Feb-27 10:55:48.807 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Process `AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)` is unable to find [UnixPath]: `/Users/andrades/Documents/git/aidaanva-genomeassembly/work/d7/0d1409e0e03e0b4d417d86f674225f/test_minigut_Lib1.collapsed.truncated.fastq.gz` (pattern: `test_minigut_Lib1.collapsed.truncated.fastq.gz`)
+Feb-27 10:55:48.808 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Process `AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)` is unable to find [UnixPath]: `/Users/andrades/Documents/git/aidaanva-genomeassembly/work/d7/0d1409e0e03e0b4d417d86f674225f/test_minigut_Lib1.paired.fastq.gz` (pattern: `test_minigut_Lib1.paired.fastq.gz`)
+Feb-27 10:55:48.810 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [d7/0d1409] Cached process > AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)
+Feb-27 10:55:48.814 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL > Skipping output binding because one or more optional files are missing: fileoutparam<0:1>
+Feb-27 10:55:48.815 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL > Skipping output binding because one or more optional files are missing: fileoutparam<3:1>
+Feb-27 10:55:48.815 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL > Skipping output binding because one or more optional files are missing: fileoutparam<4:1>
+Feb-27 10:55:48.815 [Actor Thread 4] DEBUG nextflow.processor.TaskProcessor - Process AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL > Skipping output binding because one or more optional files are missing: fileoutparam<5:1>
+Feb-27 10:55:48.823 [Actor Thread 6] INFO  nextflow.extension.DumpOp - [DUMP] [['id':'test_minigut', 'lib_id':null, 'single_end':false, 'treatment':'none'], [/Users/andrades/Documents/git/aidaanva-genomeassembly/work/b3/a5e02b8534a8480f1f039b80612ade/test_minigut2_Lib2.pair1.truncated.fastq.gz, /Users/andrades/Documents/git/aidaanva-genomeassembly/work/b3/a5e02b8534a8480f1f039b80612ade/test_minigut2_Lib2.pair2.truncated.fastq.gz, /Users/andrades/Documents/git/aidaanva-genomeassembly/work/d7/0d1409e0e03e0b4d417d86f674225f/test_minigut_Lib1.pair1.truncated.fastq.gz, /Users/andrades/Documents/git/aidaanva-genomeassembly/work/d7/0d1409e0e03e0b4d417d86f674225f/test_minigut_Lib1.pair2.truncated.fastq.gz], []]
+Feb-27 10:55:48.891 [Task submitter] DEBUG nextflow.executor.LocalTaskHandler - Launch cmd line: /bin/bash -ue .command.run
+Feb-27 10:55:48.894 [Task submitter] INFO  nextflow.Session - [b7/d2272e] Submitted process > AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)
+Feb-27 10:55:49.876 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[id: 4; name: AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1); status: COMPLETED; exit: 1; error: -; workDir: /Users/andrades/Documents/git/aidaanva-genomeassembly/work/b7/d2272ea786540c8b3b7b4f8d6fb63c]
+Feb-27 10:55:49.891 [Task monitor] ERROR nextflow.processor.TaskProcessor - Error executing process > 'AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)'
+
+Caused by:
+  Process `AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)` terminated with an error exit status (1)
+
+Command executed:
+
+  r1=''
+          r2=''
+          sgl=''
+          let counter=0
+          for i in test_minigut2_Lib2.pair1.truncated.fastq.gz test_minigut2_Lib2.pair2.truncated.fastq.gz test_minigut_Lib1.pair1.truncated.fastq.gz test_minigut_Lib1.pair2.truncated.fastq.gz; do
+              if [[ ${counter} == 0 ]]; then
+                  r1+=""${i}", "
+                  let counter+=1
+              elif [[ ${counter} == 1 ]]; then
+                  r2+=""${i}", "
+                  let counter=0
+              fi
+          done
+  
+          for i in ; do
+              sgl+=""${i}", "
+          done
+  
+          echo -e "[{
+  	orientation: "fr",
+  	type: "paired-end",
+  	right reads: [${r1%, }],
+  	left reads: [${r2%, }],
+  	single reads: [${sgl%, }]
+  	}
+  ]" > test_minigut.yaml
+  
+  
+          # echo test_minigut2_Lib2.pair1.truncated.fastq.gz test_minigut2_Lib2.pair2.truncated.fastq.gz test_minigut_Lib1.pair1.truncated.fastq.gz test_minigut_Lib1.pair2.truncated.fastq.gz
+          # test_minigut2_Lib2.pair1.truncated.fastq.gz null
+          # test_minigut2_Lib2.pair2.truncated.fastq.gz null
+
+Command exit status:
+  1
+
+Command output:
+  (empty)
+
+Work dir:
+  /Users/andrades/Documents/git/aidaanva-genomeassembly/work/b7/d2272ea786540c8b3b7b4f8d6fb63c
+
+Tip: when you have fixed the problem you can continue the execution adding the option `-resume` to the run command line
+Feb-27 10:55:49.895 [main] DEBUG nextflow.Session - Session await > all process finished
+Feb-27 10:55:49.899 [Task monitor] INFO  nextflow.Session - Execution cancelled -- Finishing pending tasks before exit
+Feb-27 10:55:49.920 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Feb-27 10:55:49.923 [main] INFO  nextflow.Nextflow - -[0;35m[aidaanva/genomeassembly][0;31m Pipeline completed with errors[0m-
+Feb-27 10:55:49.931 [main] DEBUG nextflow.trace.WorkflowStatsObserver - Workflow completed > WorkflowStats[succeededCount=0; failedCount=1; ignoredCount=0; cachedCount=3; pendingCount=0; submittedCount=0; runningCount=0; retriesCount=0; abortedCount=0; succeedDuration=0ms; failedDuration=960ms; cachedDuration=8s;loadCpus=0; loadMemory=0; peakRunning=1; peakCpus=1; peakMemory=6 GB; ]
+Feb-27 10:55:49.931 [main] DEBUG nextflow.trace.TraceFileObserver - Flow completing -- flushing trace file
+Feb-27 10:55:49.939 [main] DEBUG nextflow.trace.ReportObserver - Flow completing -- rendering html report
+Feb-27 10:55:49.957 [main] DEBUG nextflow.trace.ReportObserver - Execution report summary data:
+  [{"cpuUsage":{"mean":44.4,"min":44.4,"q1":44.4,"q2":44.4,"q3":44.4,"max":44.4,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)"},"process":"SAMPLESHEET_CHECK","mem":{"mean":4677632,"min":4677632,"q1":4677632,"q2":4677632,"q3":4677632,"max":4677632,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)"},"memUsage":{"mean":0.07,"min":0.07,"q1":0.07,"q2":0.07,"q3":0.07,"max":0.07,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)"},"timeUsage":null,"vmem":{"mean":31363072,"min":31363072,"q1":31363072,"q2":31363072,"q3":31363072,"max":31363072,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)"},"reads":{"mean":679758,"min":679758,"q1":679758,"q2":679758,"q3":679758,"max":679758,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)"},"cpu":{"mean":44.4,"min":44.4,"q1":44.4,"q2":44.4,"q3":44.4,"max":44.4,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)"},"time":null,"writes":{"mean":866,"min":866,"q1":866,"q2":866,"q3":866,"max":866,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:INPUT_CHECK:SAMPLESHEET_CHECK (test.tsv)"}},{"cpuUsage":{"mean":93.53,"min":92.35,"q1":92.94,"q2":93.53,"q3":94.11,"max":94.7,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)"},"process":"ADAPTERREMOVAL","mem":{"mean":23257088,"min":22740992,"q1":22999040,"q2":23257088,"q3":23515136,"max":23773184,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)"},"memUsage":{"mean":0.36,"min":0.35,"q1":0.36,"q2":0.36,"q3":0.37,"max":0.37,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)"},"timeUsage":{"mean":0.01,"min":0,"q1":0.01,"q2":0.01,"q3":0.01,"max":0.01,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)"},"vmem":{"mean":169832448,"min":169758720,"q1":169795584,"q2":169832448,"q3":169869312,"max":169906176,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)"},"reads":{"mean":5120668,"min":3462559,"q1":4291613.5,"q2":5120668,"q3":5949722.5,"max":6778777,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)"},"cpu":{"mean":187.05,"min":184.7,"q1":185.88,"q2":187.05,"q3":188.23,"max":189.4,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)"},"time":{"mean":2000,"min":1000,"q1":1500,"q2":2000,"q3":2500,"max":3000,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)"},"writes":{"mean":5068977.5,"min":3412099,"q1":4240538.25,"q2":5068977.5,"q3":5897416.75,"max":6725856,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:ADAPTERREMOVAL (test_minigut)"}},{"cpuUsage":null,"process":"YML_CREATION_SPADES","mem":null,"memUsage":null,"timeUsage":{"mean":0.01,"min":0.01,"q1":0.01,"q2":0.01,"q3":0.01,"max":0.01,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)"},"vmem":null,"reads":null,"cpu":null,"time":{"mean":960,"min":960,"q1":960,"q2":960,"q3":960,"max":960,"minLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)","maxLabel":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)","q1Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)","q2Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)","q3Label":"AIDAANVA_GENOMEASSEMBLY:GENOMEASSEMBLY:YML_CREATION_SPADES (1)"},"writes":null}]
+Feb-27 10:55:50.814 [main] DEBUG nextflow.trace.TimelineObserver - Flow completing -- rendering html timeline
+Feb-27 10:55:51.171 [main] DEBUG nextflow.cache.CacheDB - Closing CacheDB done
+Feb-27 10:55:51.171 [main] INFO  org.pf4j.AbstractPluginManager - Stop plugin 'nf-amazon@1.7.1'
+Feb-27 10:55:51.171 [main] DEBUG nextflow.plugin.BasePlugin - Plugin stopped nf-amazon
+Feb-27 10:55:51.172 [main] DEBUG c.u.s3fs.ng.S3ParallelDownload - Shutdown S3 downloader
+Feb-27 10:55:51.172 [main] DEBUG c.u.s3fs.ng.S3ParallelDownload - Shutdown S3 downloader - done
+Feb-27 10:55:51.186 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye
