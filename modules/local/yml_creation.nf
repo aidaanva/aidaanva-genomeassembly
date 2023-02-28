@@ -18,29 +18,38 @@ process YML_CREATION_SPADES {
     def pairs_list = pairs.join(' ')
     def singletons_list = singletons.join(' ')
     """
-        r1=''
-        r2=''
-        sgl=''
-        let counter=0
-        for i in ${pairs_list}; do
-            if [[ \${counter} == 0 ]]; then
-                r1+="\\\"\${i}\\\", "
-                let counter+=1
-            elif [[ \${counter} == 1 ]]; then
-                r2+="\\\"\${i}\\\", "
-                let counter=0
-            fi
-        done
+    #!/usr/bin/env bash
+    echo "bash set"
 
-        for i in ${singletons_list}; do
-            sgl+="\\\"\${i}\\\", "
-        done
+    r1=''
+    r2=''
+    sgl=''
+    let counter=0
+    echo "main variables set"
 
-        echo -e "[{\n\torientation: \"fr\",\n\ttype: \"paired-end\",\n\tright reads: [\${r1%, }],\n\tleft reads: [\${r2%, }],\n\tsingle reads: [\${sgl%, }]\n\t}\n]" > ${prefix}.yaml
+    for i in ${pairs_list}; do
+        if [[ \${counter} == 0 ]]; then
+            r1+="\\\"\${i}\\\", "
+            let counter+=1
+            echo "r1: \${r1}"
+        elif [[ \${counter} == 1 ]]; then
+            r2+="\\\"\${i}\\\", "
+            let counter=0
+            echo "r2: \${r2}"
+        fi
+    done
 
+    for i in ${singletons_list}; do
+        sgl+="\\\"\${i}\\\", "
+    done
+    echo "sgl: \${sgl}"
 
-        # ${pairs_list}
-        # ${pairs[0]} ${singletons[0]}
-        # ${pairs[1]} ${singletons[1]}
+    echo -e "[{\norientation: \"fr\",\ntype: \"paired-end\",\nright reads: [\${r1%, }],\nleft reads: [\${r2%, }],\nsingle reads: [\${sgl%, }]\n}\n]" > ${prefix}.yaml
+    echo "yml done"
+
+    cat <<-END_VERSIONS > versions.yml
+    "${task.process}":
+        bash: \$(echo \$(bash --version 2>&1 | sed -e 's#.* version##g') | sed 's# .*##g')
+    END_VERSIONS
     """
 }

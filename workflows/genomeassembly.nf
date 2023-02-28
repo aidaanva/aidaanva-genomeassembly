@@ -53,7 +53,7 @@ include { FASTQC                      } from '../modules/nf-core/fastqc/main'
 include { ADAPTERREMOVAL              } from '../modules/nf-core/adapterremoval/main'
 include { MULTIQC                     } from '../modules/nf-core/multiqc/main'
 include { CUSTOM_DUMPSOFTWAREVERSIONS } from '../modules/nf-core/custom/dumpsoftwareversions/main'
-
+include { SPADES                      } from '../modules/nf-core/spades/main'
 /*
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
     RUN MAIN WORKFLOW
@@ -80,9 +80,6 @@ workflow GENOMEASSEMBLY {
     )
     ch_versions = ch_versions.mix(ADAPTERREMOVAL.out.versions)
 
-//    ADAPTERREMOVAL.out.paired_truncated.dump()
-//    ADAPTERREMOVAL.out.singles_truncated.dump()
-
 //Test with real test data: singletons --> check that they are in the right order
     ch_input_for_yml_creation = ADAPTERREMOVAL.out.paired_truncated.mix(
         ADAPTERREMOVAL.out.singles_truncated
@@ -102,9 +99,37 @@ workflow GENOMEASSEMBLY {
             def singletons2 = singletons.flatten()
         [ meta, pairs2, singletons2]
     }
-    .dump()
 
+// Creating yml file for SPAdes with the YML_CREATION_SPADES
     YML_CREATION_SPADES(ch_input_for_yml_creation)
+    ch_versions = ch_versions.mix(YML_CREATION_SPADES.out.versions)
+
+// Creating input channel for SPAdes
+    ch_input_spades = ADAPTERREMOVAL.out.paired_truncated
+                        .mix (ADAPTERREMOVAL.out.singles_truncated)
+                        .groupTuple()
+                        .map{
+                            meta, reads ->
+                                def new_meta = meta.clone()
+                                    new_meta["lib_id"] = null
+                            [ new_meta, reads ]
+                        }
+                        .groupTuple( by : 0 )
+                        .map{
+                            meta, reads ->
+                                def reads2 = reads.flatten()
+                            [ meta, reads2]
+                        }
+                        .join (YML_CREATION_SPADES.out.yaml)
+                        .multiMap {
+                            meta, reads, yaml ->
+                                reads: [ meta, reads, [], [] ]
+                                yaml: [ yaml ]
+                            }
+
+
+// Running SPAdes
+    SPADES(ch_input_spades.reads, ch_input_spades.yaml, [])
 
 }
 /*
